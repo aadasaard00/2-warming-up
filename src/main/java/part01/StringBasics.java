@@ -96,8 +96,17 @@ public class StringBasics {
      * @param width The width of the string, for example 6.
      * @return The text centered in a string of the given width: " Java ".
      */
-    public String center(String text, int width) {
-        return null; // TODO: implement this method
+    public String center(String tekstinpatka, int rivinPituus) {
+
+        if(tekstinpatka.length() >= rivinPituus){
+            return tekstinpatka;
+        }
+        int totalPadding = rivinPituus - tekstinpatka.length();
+
+        int leftPad = totalPadding / 2;
+        int rightPad = totalPadding - leftPad;
+       
+        return " ".repeat(leftPad) + tekstinpatka + " ".repeat(rightPad); 
     }
 
     /**
